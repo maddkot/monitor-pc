@@ -8,6 +8,7 @@ function createWindow() {
         height: 430,
         minWidth: 600,
         minHeight: 430,
+        icon: __dirname + '/icon.ico',
         webPreferences: {
             nodeIntegration: false,
             worldSafeExecuteJavaScript: true,
@@ -16,7 +17,7 @@ function createWindow() {
             devTools: false
         }
     })
-
+    win.setMenu(null);
     win.loadFile('index.html');
 }
 
