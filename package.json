@@ -1,18 +1,34 @@
 {
   "name": "monitor-pc",
+  "productName": "CPU Monitor",
   "version": "1.0.0",
-  "description": "",
+  "description": "CPU health tracking application",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack --config webpack.common.js --watch",
-    "start": "electron ."
+    "start": "electron .",
+    "build-installer": "electron-builder"
+  },
+  "build":{
+    "appId": "CPU Monitor",
+    "win": {
+      "target": ["nsis"],
+      "icon": "icon.ico"
+    },
+    "nsis": {
+      "installerIcon": "icon.ico",
+      "uninstallerIcon": "icon.ico",
+      "uninstallDisplayName": "CPU Monitor",
+      "license": "license.txt",
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "electron": "^12.0.9",
     "node-os-utils": "^1.3.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
@@ -23,6 +39,8 @@
     "@babel/preset-react": "^7.13.13",
     "babel-loader": "^8.2.2",
     "css-loader": "^5.2.5",
+    "electron": "^12.0.9",
+    "electron-builder": "^22.10.5",
     "style-loader": "^2.0.0",
     "webpack": "^5.37.1",
     "webpack-cli": "^4.7.0"
