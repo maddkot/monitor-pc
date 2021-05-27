@@ -8,10 +8,19 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack --config webpack.common.js --watch",
     "start": "electron .",
-    "build-installer": "electron-builder"
+    "build": "electron-builder"
   },
   "build":{
     "appId": "CPU Monitor",
+    "directories":{
+      "output": "build"
+    },
+    "files": [
+      "./app/app.js",
+      "./index.html",
+      "./main.js",
+      "./preload.js"
+    ],
     "win": {
       "target": ["nsis"],
       "icon": "icon.ico"
