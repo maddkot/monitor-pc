@@ -12,6 +12,13 @@
   * NODE.JS
   * Electron.JS
   * Библиотеки [node-os-utils](https://www.npmjs.com/package/node-os-utils)
+  * Ссылка на файл установки приложения (Архив на яндекс.диске. Внутри exe)-(https://disk.yandex.ru/d/HdU_9R3tb6isXA)  
+
+
+  Из дальнейших улучшений:
+  * Снизить объем занимаемого места на диске программой
+  * Подключить redux-saga
+
 
 
 
